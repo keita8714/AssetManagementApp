@@ -11,8 +11,6 @@ import Charts
 
 class NextViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    
     
     var label = String()
     var question = QuestionBrain()
@@ -24,21 +22,37 @@ class NextViewController: UIViewController {
     var REIT = 0
     var doll = 0
     
+    var dataEntries: [PieChartDataEntry] = []
+    
     @IBOutlet var chartView: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calculate()
         print(count2)
-         self.chartView.centerText = "ポートフォリオ"// グラフに表示するデータのタイトルと値
-             let dataEntries = [
-                PieChartDataEntry(value: Double(overseasStocks), label: "海外株式"),
-                 PieChartDataEntry(value: Double(japaneseStocks), label: "日本株式"),
-                 PieChartDataEntry(value: Double(bonds), label: "国債・預金等"),
-                 PieChartDataEntry(value: Double(REIT), label: "REIT"),
-                 PieChartDataEntry(value: Double(doll), label: "ドル資産"),
-                
-             ]
+         self.chartView.centerText = "ポートフォリオ"
+        // グラフに表示するデータのタイトルと値
+        
+        if overseasStocks > 0 {
+            dataEntries.append(PieChartDataEntry(value: Double(overseasStocks), label: "海外株式"))
+        }
+        
+        if japaneseStocks > 0 {
+            dataEntries.append(PieChartDataEntry(value: Double(japaneseStocks), label: "日本株式"))
+        }
+        
+        if bonds > 0{
+            dataEntries.append(PieChartDataEntry(value: Double(bonds), label: "国債・預金等"))
+        }
+        
+        if REIT > 0{
+            dataEntries.append(PieChartDataEntry(value: Double(REIT), label: "REIT"))
+        }
+        
+        if doll > 0{
+            dataEntries.append(PieChartDataEntry(value: Double(doll), label: "ドル資産"))
+        }
+        
              
         let dataSet = PieChartDataSet(entries: dataEntries, label: "参考ポートフォリオ")
 
@@ -68,22 +82,19 @@ class NextViewController: UIViewController {
 func calculate(){
     if count2 < 5 {
         resultLabel.text = "超堅実タイプ"
-        descriptionLabel.text = "リスクは最も低いが、リターンは最も少ない。"
         bonds = 90
         japaneseStocks = 10
         
     }
     else if count2 < 9 {
         resultLabel.text = "堅実タイプ"
-        descriptionLabel.text = "リスクを抑えながらも少しずつ資産を増やす。"
-        bonds = 75
-        overseasStocks = 10
+        bonds = 65
+        overseasStocks = 15
         japaneseStocks = 10
-        REIT = 5
+        REIT = 10
     }
     else if count2 < 13 {
         resultLabel.text = "やや堅実タイプ"
-        descriptionLabel.text = ""
         bonds = 50
         overseasStocks = 20
         japaneseStocks = 10
@@ -122,4 +133,7 @@ func calculate(){
         doll = 15
     }
        }
+    @IBAction func button(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+}

@@ -28,28 +28,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button1(_ sender: Any) {
-        move()
         questionBrain.getChoice1RiskTolerance()
-        questionBrain.nextQuestion()
+        move()
         updateUI()
     }
     
     @IBAction func button2(_ sender: Any) {
-        move()
         questionBrain.getChoice2RiskTolerance()
-        questionBrain.nextQuestion()
+        move()
         updateUI()
     }
     @IBAction func button3(_ sender: Any) {
-        move()
         questionBrain.getChoice3RiskTolerance()
-        questionBrain.nextQuestion()
+        move()
         updateUI()
     }
     @IBAction func button4(_ sender: Any) {
-        move()
         questionBrain.getChoice4RiskTolerance()
-        questionBrain.nextQuestion()
+        move()
         updateUI()
     }
     
@@ -62,12 +58,15 @@ class ViewController: UIViewController {
         choiceButton4.setTitle(questionBrain.getChoice4(), for: .normal)
         }
     
-    //questionBrainが４になったら次画面へ移動
+    //ボタンを押したら次の質問文へ　questionBrainが４になったら次画面へ移動
     func move(){
         if questionBrain.QuestionNumber == 4{
                performSegue(withIdentifier: "Next", sender: nil)
             questionBrain.QuestionNumber = 0
-               }
+        }else{
+            questionBrain.QuestionNumber += 1
+        }
+        
     }
     
     //riskToleranceを遷移先で使えるように値を渡す

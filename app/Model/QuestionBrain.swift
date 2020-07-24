@@ -65,10 +65,5 @@ struct QuestionBrain {
     mutating func getChoice4RiskTolerance() {
     riskTolerance += Quetions[QuestionNumber].choice4RiskTolerance
        }
-  
-    //次の質問文に進む
-    mutating func nextQuestion(){
-        QuestionNumber += 1
-        }
     
     }

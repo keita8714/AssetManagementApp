@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -77,14 +77,12 @@
 		23D75BE924C3EDD900925BFD /* app */ = {
 			isa = PBXGroup;
 			children = (
+				23FAAF1D24CB294200574E2C /* View */,
 				23D75BFE24C3EEF400925BFD /* Model */,
+				23FAAF1E24CB295900574E2C /* Controller */,
+				23D75BF824C3EDDE00925BFD /* Info.plist */,
 				23D75BEA24C3EDD900925BFD /* AppDelegate.swift */,
 				23D75BEC24C3EDD900925BFD /* SceneDelegate.swift */,
-				23D75BEE24C3EDD900925BFD /* ViewController.swift */,
-				23D75BF024C3EDD900925BFD /* Main.storyboard */,
-				23D75BF324C3EDDE00925BFD /* Assets.xcassets */,
-				23D75BF524C3EDDE00925BFD /* LaunchScreen.storyboard */,
-				23D75BF824C3EDDE00925BFD /* Info.plist */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -94,9 +92,27 @@
 			children = (
 				23D75BFF24C3EF3500925BFD /* Question.swift */,
 				23D75C0124C3F11400925BFD /* QuestionBrain.swift */,
-				23FB40BE24C44F1100BB55CC /* NextViewController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23FAAF1D24CB294200574E2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23D75BF024C3EDD900925BFD /* Main.storyboard */,
+				23D75BF524C3EDDE00925BFD /* LaunchScreen.storyboard */,
+				23D75BF324C3EDDE00925BFD /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23FAAF1E24CB295900574E2C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23D75BEE24C3EDD900925BFD /* ViewController.swift */,
+				23FB40BE24C44F1100BB55CC /* NextViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C9FE57153B8D8069A70B9827 /* Pods */ = {
@@ -105,7 +121,6 @@
 				0918ADCB36E5C2CDA811432F /* Pods-app.debug.xcconfig */,
 				C12B633994F01AE99CC20E5D /* Pods-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
