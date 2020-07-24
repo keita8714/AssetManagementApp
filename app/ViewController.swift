@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         updateUI()
     }
     
+    //画面に質問文と回答文を出力
     func updateUI() {
         questionLabel.text = questionBrain.getQuetionTitle()
         choiceButton1.setTitle(questionBrain.getChoice1(), for: .normal)
@@ -61,12 +62,22 @@ class ViewController: UIViewController {
         choiceButton4.setTitle(questionBrain.getChoice4(), for: .normal)
         }
     
+    //questionBrainが４になったら次画面へ移動
     func move(){
         if questionBrain.QuestionNumber == 4{
                performSegue(withIdentifier: "Next", sender: nil)
             questionBrain.QuestionNumber = 0
                }
     }
+    
+    //riskToleranceを遷移先で使えるように値を渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! NextViewController
+        nextVC.count2 = questionBrain.riskTolerance
+        
+    }
+    
+   
     }
 
 

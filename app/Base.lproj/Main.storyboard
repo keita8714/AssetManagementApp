@@ -108,17 +108,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0h-yo-SXQ">
-                                <rect key="frame" x="51" y="406" width="313" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0h-yo-SXQ">
+                                <rect key="frame" x="50" y="144" width="314" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7l-Qi-90D" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="60" y="440" width="294" height="322"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFT-ra-iXZ">
+                                <rect key="frame" x="50" y="230" width="314" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WRZ-OT-cqj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mFT-ra-iXZ" firstAttribute="leading" secondItem="dZA-eD-Ij7" secondAttribute="leading" constant="50" id="Asb-uk-dc2"/>
+                            <constraint firstItem="dZA-eD-Ij7" firstAttribute="bottom" secondItem="q7l-Qi-90D" secondAttribute="bottom" constant="100" id="EDW-VT-fQH"/>
+                            <constraint firstItem="q7l-Qi-90D" firstAttribute="top" secondItem="mFT-ra-iXZ" secondAttribute="bottom" constant="60" id="RUp-dU-hEB"/>
+                            <constraint firstItem="mFT-ra-iXZ" firstAttribute="top" secondItem="z0h-yo-SXQ" secondAttribute="bottom" constant="50" id="bN9-Qq-4ST"/>
+                            <constraint firstItem="z0h-yo-SXQ" firstAttribute="leading" secondItem="dZA-eD-Ij7" secondAttribute="leading" constant="50" id="f0z-Sc-mjQ"/>
+                            <constraint firstItem="z0h-yo-SXQ" firstAttribute="top" secondItem="dZA-eD-Ij7" secondAttribute="top" constant="100" id="jz2-QJ-rjk"/>
+                            <constraint firstItem="dZA-eD-Ij7" firstAttribute="trailing" secondItem="z0h-yo-SXQ" secondAttribute="trailing" constant="50" id="qEc-Gc-nJM"/>
+                            <constraint firstItem="q7l-Qi-90D" firstAttribute="leading" secondItem="dZA-eD-Ij7" secondAttribute="leading" constant="60" id="rA3-Ng-Oku"/>
+                            <constraint firstItem="dZA-eD-Ij7" firstAttribute="trailing" secondItem="q7l-Qi-90D" secondAttribute="trailing" constant="60" id="wt7-i4-v4B"/>
+                            <constraint firstItem="dZA-eD-Ij7" firstAttribute="trailing" secondItem="mFT-ra-iXZ" secondAttribute="trailing" constant="50" id="y1l-Jv-wax"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dZA-eD-Ij7"/>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="q7l-Qi-90D" id="bRG-lr-7Yp"/>
+                        <outlet property="descriptionLabel" destination="mFT-ra-iXZ" id="mKf-js-Cuo"/>
+                        <outlet property="resultLabel" destination="z0h-yo-SXQ" id="haJ-Bb-FWF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvK-V5-wPt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
