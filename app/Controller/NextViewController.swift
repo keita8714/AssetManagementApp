@@ -8,9 +8,12 @@
 
 import UIKit
 import Charts
+import GoogleMobileAds
 
 class NextViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
+    
+    @IBOutlet var bannerView: GADBannerView!
     
     var label = String()
     var question = QuestionBrain()
@@ -28,6 +31,10 @@ class NextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerView.adUnitID = "ca-app-pub-4345619997084919/7573810132"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
         calculate()
         print(count2)
          self.chartView.centerText = "ポートフォリオ"
