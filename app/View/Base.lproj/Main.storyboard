@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="資産運用タイプ別診断" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thr-k7-Nxq">
-                                <rect key="frame" x="100" y="144" width="214" height="268"/>
+                                <rect key="frame" x="100" y="144" width="214" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myR-Xc-a0H">
-                                <rect key="frame" x="140" y="532" width="134" height="30"/>
+                                <rect key="frame" x="140" y="486" width="134" height="76"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="スタート">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,15 +31,23 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="shA-PX-lrg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5つの質問に答えるだけでOK！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6P-3Z-rHd">
+                                <rect key="frame" x="20" y="276" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gfR-b0-fjo" firstAttribute="bottom" secondItem="thr-k7-Nxq" secondAttribute="bottom" constant="450" id="JzH-hX-wBh"/>
+                            <constraint firstItem="o6P-3Z-rHd" firstAttribute="leading" secondItem="gfR-b0-fjo" secondAttribute="leading" constant="20" id="OVB-Iv-mH3"/>
+                            <constraint firstItem="myR-Xc-a0H" firstAttribute="top" secondItem="o6P-3Z-rHd" secondAttribute="bottom" constant="180" id="PNg-Iw-Lzb"/>
                             <constraint firstItem="gfR-b0-fjo" firstAttribute="trailing" secondItem="myR-Xc-a0H" secondAttribute="trailing" constant="140" id="PrB-4V-AuY"/>
                             <constraint firstItem="myR-Xc-a0H" firstAttribute="leading" secondItem="gfR-b0-fjo" secondAttribute="leading" constant="140" id="QEt-pJ-Dcf"/>
                             <constraint firstItem="thr-k7-Nxq" firstAttribute="top" secondItem="gfR-b0-fjo" secondAttribute="top" constant="100" id="bs8-kk-xWj"/>
+                            <constraint firstItem="o6P-3Z-rHd" firstAttribute="top" secondItem="thr-k7-Nxq" secondAttribute="bottom" constant="60" id="fBA-l5-n16"/>
                             <constraint firstItem="gfR-b0-fjo" firstAttribute="bottom" secondItem="myR-Xc-a0H" secondAttribute="bottom" constant="300" id="g8m-Pt-5gz"/>
-                            <constraint firstItem="myR-Xc-a0H" firstAttribute="top" secondItem="thr-k7-Nxq" secondAttribute="bottom" constant="120" id="noM-bB-PFa"/>
+                            <constraint firstItem="gfR-b0-fjo" firstAttribute="trailing" secondItem="o6P-3Z-rHd" secondAttribute="trailing" constant="20" id="pNM-qB-wQk"/>
                             <constraint firstItem="gfR-b0-fjo" firstAttribute="trailing" secondItem="thr-k7-Nxq" secondAttribute="trailing" constant="100" id="qze-IX-m2n"/>
                             <constraint firstItem="thr-k7-Nxq" firstAttribute="leading" secondItem="gfR-b0-fjo" secondAttribute="leading" constant="100" id="vl1-Yv-6vz"/>
                         </constraints>

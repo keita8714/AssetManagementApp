@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0918ADCB36E5C2CDA811432F /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
-		23D75BE724C3EDD900925BFD /* app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D75BE724C3EDD900925BFD /* originalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = originalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D75BEA24C3EDD900925BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23D75BEC24C3EDD900925BFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		23D75BEE24C3EDD900925BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		23D75BE824C3EDD900925BFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23D75BE724C3EDD900925BFD /* app.app */,
+				23D75BE724C3EDD900925BFD /* originalApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			);
 			name = app;
 			productName = "資産運用提案アプリ";
-			productReference = 23D75BE724C3EDD900925BFD /* app.app */;
+			productReference = 23D75BE724C3EDD900925BFD /* originalApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keita.----------";
-				PRODUCT_NAME = app;
+				PRODUCT_NAME = originalApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,7 +416,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keita.----------";
-				PRODUCT_NAME = app;
+				PRODUCT_NAME = originalApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
